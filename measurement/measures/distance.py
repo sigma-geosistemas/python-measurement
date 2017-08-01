@@ -148,12 +148,19 @@ class Area(MeasureBase):
             for k, v in Distance.get_units().items()
         ]
     )
+    UNITS.update({
+        'ha': 10000
+    })
     ALIAS = dict(
         [
             (k, '%s%s' % (AREA_PREFIX, v))
             for k, v in Distance.get_aliases().items()
         ]
     )
+    ALIAS.update({
+        'hectare': 'ha'
+    })
+    SI_UNITS = ['sq_m', ]
 
     def __truediv__(self, other):
         if isinstance(other, NUMERIC_TYPES):

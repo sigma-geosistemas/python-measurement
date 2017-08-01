@@ -2,7 +2,7 @@ import inspect
 import sys
 
 
-if sys.version_info >= (2,7,2):
+if sys.version_info >= (2, 7, 2):
     from functools import total_ordering
 else:
     # For Python < 2.7.2. Python 2.6 does not have total_ordering, and
